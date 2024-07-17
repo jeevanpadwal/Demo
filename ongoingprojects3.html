@@ -1,0 +1,236 @@
+<?php
+/*
+Template Name: Custom Project Template
+*/
+get_header(); // Include header.php
+
+// Enqueue custom CSS specific to this template
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	  body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
+      margin: 0;
+  }
+
+  .custom-content .arrow-link {
+      display: flex;
+	  text-decoration: underline; /* Add underline to the link */
+      color: blue;
+      justify-content: flex-end;
+      align-items: left;
+      padding: 10px;
+  }
+  
+  .custom-content .arrow-link a {
+      text-decoration: none;
+      color: blue;
+      position: relative;
+      padding-left: 40px; /* Adjust the space before the arrow as needed */
+      transition: all 0.5s ease; /* Add transition for smooth effect */
+  }
+  
+  .custom-content .arrow-link a::before {
+      content: ''; /* Arrow character */
+      position: absolute;
+      color: pink;
+      left: 0;
+      transition: all 0.5s ease; /* Add transition for smooth effect */
+  }
+  
+  .custom-content .arrow-link a:hover {
+      color: rgb(217, 27, 27);
+  }
+  
+  .custom-content .arrow-link a:hover::before {
+      color: gray;
+      transform: translateX(10px); /* Move the arrow to the right on hover */
+  }
+  
+  .custom-content .centered-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1200px; /* Adjust the max-width as needed */
+  }
+  
+  .custom-content .container {
+      margin: 10px;
+      flex: 1 1 30%; /* Adjust the flex-basis as needed */
+      min-width: 280px; /* Adjust the min-width as needed */
+      max-width: 400px; /* Adjust the max-width as needed */
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Add this line */
+      overflow: hidden; /* Add this line */
+  }
+  .custom-content .container {
+    position: relative; /* Ensure the overlay is positioned correctly */
+    overflow: hidden; /* Hide overflow */
+}
+
+.custom-content .container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
+.custom-content .container:hover img {
+    opacity: 0.5; /* Add transparency */
+}
+
+.custom-content .container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white cover */
+    opacity: 0; /* Hide the overlay by default */
+    transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
+.custom-content .container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+}
+  .custom-content .container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* Hide the overlay by default */
+      transition: all 0.5s ease; /* Add transition for smooth effect */
+  }
+  
+  .custom-content .container:hover .overlay {
+      opacity: 1; /* Show the overlay on hover */
+  }
+  
+  .custom-content .container .overlay .icon {
+      font-size: 24px;
+      color: #fff;
+      margin: 10px;
+      cursor: pointer;
+  }
+  
+  .custom-content .container .overlay .icon:hover {
+      color: #ccc; /* Change the icon color on hover */
+  }
+  
+  @media screen and (max-width: 768px) {
+      .custom-content .container {
+          flex-basis: 100%; /* Full width on smaller screens */
+      }
+  }
+	
+	</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Header (unchanged) -->
+<header class="w3-container w3-center w3-padding-32"> 
+<!--   <h1><b>My Blog</b></h1>
+  <p>Welcome to the blog of <span class="w3-tag">unknown</span></p> -->
+</header>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main custom-content" style="justify-content: center;">
+
+  <!-- Centered Image Containers -->
+  <div class="centered-wrapper">
+    <div class="container w3-container">
+      <img src="https://www.jaljeevika.org/wp-content/uploads/2024/05/bajaj.jpg" alt="Mountains">
+      <div class="w3-container w3-white">
+        <p style="color:#341272"><b>Aqua Entrepreneurs Development Program for Livelihood(AQUAEDP)</b></p>
+       <br>
+          <p>The Aqua Entrepreneurs Development Program for Livelihood (AquaEDP) initiative advocates for the advancement of livelihoods and entrepreneurship in aquaculture.</p>
+      </div>
+      <div class="arrow-link">
+        <a href="https://www.jaljeevika.org/aqua-entrepreneurs-development-program-for-livelihood-aquaedp">Read More</a>
+      </div>
+    </div>
+    <div class="container w3-container">
+      <img src="https://www.jaljeevika.org/wp-content/uploads/2024/05/herbalife.jpg" alt="Lights">
+      <div class="w3-container w3-white">
+        <p style="color:#341272"><b>AQUAECO: Building climate resilient livelihood opportunity</b></p><br>
+        <p>AQUAECO aims to create climate-resilient livelihood opportunities for small farmers through aquatic food production systems.</p>
+      </div>
+      <div class="arrow-link">
+        <a href="https://www.jaljeevika.org/aquaeco-building-climate-resilient-livelihood-opportunity-for-small-marginal-farmers-using-aquatic-food-production-system">Read More</a>
+      </div>
+    </div>
+    <div class="container w3-container">
+      <img src="https://www.jaljeevika.org/wp-content/uploads/2024/05/chakra3.jpg" alt="Nature">
+      <div class="w3-container w3-white">
+        <p style="color:#341272"><b>Chakra Scholarship</b></p><br>
+        <p>The Chakra Scholarship program provides female students from underprivileged backgrounds with maritime education opportunities, fostering gender equality and economic independence.</p>
+      </div>
+      <div class="arrow-link">
+        <a href="https://www.jaljeevika.org/chakra-scholarship">Read More</a>
+      </div>
+    </div>
+    <div class="container w3-container">
+      <img src="https://www.jaljeevika.org/wp-content/uploads/2024/05/cms-1-scaled.jpg" alt="P1">
+      <div class="w3-container w3-white">
+        <p><b>Climate Resilient Agriculture</b></p>
+        <p>The project focuses on implementing climate-resilient agricultural practices to mitigate the impacts of climate change on farming communities.</p>
+      </div>
+      <div class="arrow-link">
+        <a href="https://www.jaljeevika.org/climate-resilient-agriculture">Read More</a>
+      </div>
+    </div>
+    <div class="container w3-container">
+      <img src="https://www.jaljeevika.org/wp-content/uploads/2024/05/bombay-sappers.jpg" alt="P2">
+      <div class="w3-container w3-white">
+        <p><b>Capacity Building for Army Personnel in Aquatic Livelihood</b></p>
+        <p>The project provides comprehensive training to retiring army personnel on modern technology in fisheries, empowering them with post-retirement livelihood options in the fisheries sector.</p>
+      </div>
+      <div class="arrow-link">
+        <a href="https://www.jaljeevika.org/capacity-building-to-the-army-personel-in-aquatic-livelihood">Read More</a>
+      </div>
+    </div>
+<!--     <div class="container w3-container">
+      <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="P3">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div> -->
+<!--       <div class="arrow-link">
+        <a href="project-details.html">Read More</a>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+<?php get_footer(); // Include footer.php ?>
