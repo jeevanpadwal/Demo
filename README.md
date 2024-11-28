@@ -1,2 +1,0 @@
-# Demo
-static html page
